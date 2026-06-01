@@ -1,0 +1,368 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Secure Checkout - From To Korea</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Noto+Serif:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#476083",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "primary": "#000613",
+                        "primary-fixed": "#d4e3ff",
+                        "primary-container": "#001f3f",
+                        "on-primary-container": "#6f88ad",
+                        "secondary": "#735c00",
+                        "secondary-container": "#fed65b",
+                        "on-secondary-container": "#745c00",
+                        "surface": "#fcf9f8",
+                        "surface-dim": "#dcd9d9",
+                        "surface-container": "#f0eded",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1c1b1b",
+                        "on-surface-variant": "#43474e",
+                        "outline": "#74777f",
+                        "outline-variant": "#c4c6cf",
+                        "background": "#fcf9f8",
+                        "on-background": "#1c1b1b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "stack-xl": "80px",
+                        "stack-md": "40px",
+                        "stack-sm": "16px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Manrope"],
+                        "headline-md": ["Noto Serif"],
+                        "headline-sm": ["Noto Serif"],
+                        "display-lg": ["Noto Serif"],
+                        "display-lg-mobile": ["Noto Serif"],
+                        "body-lg": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "button": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "button": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .form-input-focus:focus {
+            outline: none;
+            border-color: #000613;
+            box-shadow: 0 0 0 1px #000613;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky bg-surface border-b border-outline-variant z-50">
+    <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+        <div class="flex items-center gap-4">
+            <a class="font-headline-sm text-headline-sm text-primary font-bold tracking-tighter" href="index.html">From To Korea</a>
+            <a class="flex items-center gap-1 font-body-md text-on-surface-variant hover:text-primary transition-colors ml-4" href="book-now.html">
+                <span class="material-symbols-outlined !text-[18px]">chevron_left</span>
+                <span>Back to Booking</span>
+            </a>
+        </div>
+        <div class="hidden md:flex gap-4 items-center">
+            <span class="material-symbols-outlined text-secondary text-lg">lock</span>
+            <span class="font-label-caps text-label-caps text-on-surface-variant tracking-wider">SECURE CHECKOUT</span>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-xl">
+    <div class="mb-10">
+        <h1 class="font-headline-md text-headline-md text-primary mb-2">Secure Your Journey</h1>
+        <p class="font-body-md text-on-surface-variant">Review your premium itinerary reservation and complete your payment details.</p>
+    </div>
+
+    <!-- Error Alert if redirecting -->
+    <div id="no-booking-alert" class="hidden bg-error-container text-on-error-container p-6 rounded border border-error/20 mb-8 flex items-center gap-4">
+        <span class="material-symbols-outlined text-error text-2xl">warning</span>
+        <div class="flex-grow">
+            <h3 class="font-semibold font-body-lg">No Reservation Data Found</h3>
+            <p class="text-sm opacity-90">Please select a tour and reserve a date before proceeding to payment.</p>
+        </div>
+        <a href="tours.html" class="bg-primary text-on-primary px-4 py-2 rounded text-sm font-button uppercase">Browse Tours</a>
+    </div>
+
+    <div id="checkout-container" class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <!-- Left Column: Payment & Billing Forms -->
+        <div class="lg:col-span-7 space-y-12">
+            <!-- 1. Billing Details -->
+            <form id="payment-form" class="space-y-10">
+                <section class="space-y-6">
+                    <h2 class="font-headline-sm text-headline-sm text-primary border-b border-outline-variant/30 pb-3 flex items-center gap-2">
+                        <span class="text-secondary font-headline-sm">01</span> Billing Information
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex flex-col gap-2">
+                            <label class="font-label-caps text-label-caps text-on-surface-variant" for="billing-name">Full Name</label>
+                            <input class="bg-surface border border-outline-variant rounded p-3 font-body-md text-body-md form-input-focus transition-all placeholder:text-outline-variant" id="billing-name" placeholder="e.g. John Doe" required type="text">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="font-label-caps text-label-caps text-on-surface-variant" for="billing-email">Email Address</label>
+                            <input class="bg-surface border border-outline-variant rounded p-3 font-body-md text-body-md form-input-focus transition-all placeholder:text-outline-variant" id="billing-email" placeholder="john@example.com" required type="email">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. Secure Card Payment -->
+                <section class="space-y-6">
+                    <h2 class="font-headline-sm text-headline-sm text-primary border-b border-outline-variant/30 pb-3 flex items-center gap-2">
+                        <span class="text-secondary font-headline-sm">02</span> Credit Card Details
+                    </h2>
+                    <div class="bg-surface-container-low p-6 rounded border border-outline-variant/30 space-y-6">
+                        <!-- Card Number -->
+                        <div class="flex flex-col gap-2">
+                            <label class="font-label-caps text-label-caps text-on-surface-variant flex justify-between items-center" for="card-number">
+                                <span>CARD NUMBER</span>
+                                <span class="flex gap-1 items-center">
+                                    <span class="material-symbols-outlined text-on-surface-variant text-base">credit_card</span>
+                                </span>
+                            </label>
+                            <input class="bg-surface border border-outline-variant rounded p-3 font-body-md text-body-md form-input-focus transition-all placeholder:text-outline-variant tracking-widest" id="card-number" placeholder="4111 2222 3333 4444" required type="text" maxlength="19" pattern="\d{4}\s?\d{4}\s?\d{4}\s?\d{4}">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-6">
+                            <!-- Expiry -->
+                            <div class="flex flex-col gap-2">
+                                <label class="font-label-caps text-label-caps text-on-surface-variant" for="card-expiry">EXPIRY DATE</label>
+                                <input class="bg-surface border border-outline-variant rounded p-3 font-body-md text-body-md form-input-focus transition-all placeholder:text-outline-variant text-center" id="card-expiry" placeholder="MM/YY" required type="text" maxlength="5" pattern="(0[1-9]|1[0-2])\/[0-9]{2}">
+                            </div>
+                            <!-- CVC -->
+                            <div class="flex flex-col gap-2">
+                                <label class="font-label-caps text-label-caps text-on-surface-variant flex justify-between items-center" for="card-cvc">
+                                    <span>CVC</span>
+                                    <span class="material-symbols-outlined text-outline-variant text-base cursor-help" title="3-digit security code on the back of your card">help_outline</span>
+                                </label>
+                                <input class="bg-surface border border-outline-variant rounded p-3 font-body-md text-body-md form-input-focus transition-all placeholder:text-outline-variant text-center" id="card-cvc" placeholder="123" required type="password" maxlength="3" pattern="\d{3}">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Submit Button -->
+                <div class="pt-4">
+                    <button type="submit" id="pay-btn" class="w-full bg-primary text-on-primary font-button text-button py-5 rounded hover:opacity-90 transition-all flex justify-center items-center gap-3 shadow-md">
+                        <span class="material-symbols-outlined text-lg">lock</span>
+                        <span id="pay-btn-text">Confirm Booking & Pay</span>
+                    </button>
+                    <p class="text-center font-label-caps text-[10px] text-on-surface-variant/70 mt-4 tracking-wider flex items-center justify-center gap-1">
+                        <span class="material-symbols-outlined text-xs text-secondary">verified_user</span> SECURE 256-BIT SSL ENCRYPTED TRANSACTION
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Right Column: Order Summary -->
+        <div class="lg:col-span-5">
+            <div class="bg-surface-container-lowest p-8 rounded border border-outline-variant/60 shadow-[0px_4px_20px_rgba(0,0,0,0.02)] space-y-8 sticky top-28">
+                <h3 class="font-headline-sm text-headline-sm text-primary border-b border-outline-variant/30 pb-4">Reservation Summary</h3>
+                
+                <!-- Tour Details -->
+                <div class="space-y-4">
+                    <div class="bg-surface-container-low p-4 rounded border border-outline-variant/20 flex gap-4 items-center">
+                        <span class="material-symbols-outlined text-secondary text-3xl">tour</span>
+                        <div>
+                            <h4 id="summary-tour-title" class="font-semibold font-body-lg text-primary">Han River Chill like a Local</h4>
+                            <p class="text-xs text-on-surface-variant uppercase tracking-wider font-label-caps mt-0.5">Bespoke Private Tour</p>
+                        </div>
+                    </div>
+
+                    <!-- Date & Guests Details -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="border border-outline-variant/30 p-3 rounded">
+                            <span class="font-label-caps text-[10px] text-on-surface-variant block uppercase tracking-wider mb-1">DATE</span>
+                            <span id="summary-tour-date" class="font-body-md text-sm text-primary font-semibold">October 14, 2024</span>
+                        </div>
+                        <div class="border border-outline-variant/30 p-3 rounded">
+                            <span class="font-label-caps text-[10px] text-on-surface-variant block uppercase tracking-wider mb-1">GUESTS</span>
+                            <span id="summary-tour-guests" class="font-body-md text-sm text-primary font-semibold">2 Guests</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Price Calculator -->
+                <div class="border-t border-outline-variant/30 pt-6 space-y-3 font-body-md text-sm text-on-surface-variant">
+                    <div class="flex justify-between">
+                        <span>Base Rate (Private Group)</span>
+                        <span id="summary-base-rate" class="text-primary font-semibold">$150.00</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Guest Surcharge</span>
+                        <span id="summary-surcharge" class="text-primary font-semibold">$0.00</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Local Tourism & VAT Tax (10%)</span>
+                        <span id="summary-vat" class="text-primary font-semibold">$15.00</span>
+                    </div>
+                    <div class="border-t border-outline-variant/30 pt-4 flex justify-between font-body-lg text-lg text-primary font-bold">
+                        <span>Total Paid Amount</span>
+                        <span id="summary-total" class="text-secondary">$165.00</span>
+                    </div>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="bg-surface-container-low p-4 rounded border border-outline-variant/20 space-y-2">
+                    <h4 class="font-semibold text-xs text-primary font-label-caps flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-secondary text-sm">security_update_good</span> Exclusive Booking Trust
+                    </h4>
+                    <p class="text-xs text-on-surface-variant/90 leading-relaxed">Your deposit is 100% refundable up to 72 hours before departure. All itineraries are private and hosted in high-end comfort.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-primary-container text-on-primary-container border-t border-outline/20">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 text-center">
+        <p class="font-body-md text-sm text-on-primary-container/80">
+            © 2026 From To Korea. All rights reserved. Premium Travel Curators in South Korea.
+        </p>
+    </div>
+</footer>
+
+<!-- Page Logic & State Loader -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // 1. Read localStorage state
+        const tourData = JSON.parse(localStorage.getItem('current_booking'));
+
+        const noBookingAlert = document.getElementById('no-booking-alert');
+        const checkoutContainer = document.getElementById('checkout-container');
+
+        if (!tourData) {
+            noBookingAlert.classList.remove('hidden');
+            checkoutContainer.classList.add('opacity-30', 'pointer-events-none');
+            return;
+        }
+
+        // Parse booking details
+        const tourTitle = tourData.tourTitle || "Custom Private Itinerary";
+        const tourDate = tourData.date || "Selected Pre-meeting Date";
+        const guests = tourData.guests || 2;
+        const guestCount = parseInt(guests) || 1;
+
+        // Base price calculation depending on the tour
+        let baseRate = 150.00;
+        if (tourTitle.includes("Heritage")) {
+            baseRate = 200.00;
+        } else if (tourTitle.includes("Designer")) {
+            baseRate = 350.00;
+        }
+
+        // Guests surcharge ($25 extra per guest after the first 2)
+        const extraGuests = Math.max(0, guestCount - 2);
+        const surcharge = extraGuests * 25.00;
+        
+        const subtotal = baseRate + surcharge;
+        const vat = subtotal * 0.10;
+        const total = subtotal + vat;
+
+        // Render to UI
+        document.getElementById('summary-tour-title').innerText = tourTitle;
+        document.getElementById('summary-tour-date').innerText = tourDate;
+        document.getElementById('summary-tour-guests').innerText = `${guestCount} ${guestCount === 1 ? 'Guest' : 'Guests'}`;
+        document.getElementById('summary-base-rate').innerText = `$${baseRate.toFixed(2)}`;
+        document.getElementById('summary-surcharge').innerText = `$${surcharge.toFixed(2)}`;
+        document.getElementById('summary-vat').innerText = `$${vat.toFixed(2)}`;
+        document.getElementById('summary-total').innerText = `$${total.toFixed(2)}`;
+
+        // Form Submission listener
+        const form = document.getElementById('payment-form');
+        const payBtn = document.getElementById('pay-btn');
+        const payBtnText = document.getElementById('pay-btn-text');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Disable buttons and show processing states
+            payBtn.disabled = true;
+            payBtnText.innerText = "Processing Secure Payment...";
+            payBtn.classList.add('opacity-80', 'cursor-wait');
+
+            // Store receipt details in localStorage
+            const receipt = {
+                customerName: document.getElementById('billing-name').value,
+                customerEmail: document.getElementById('billing-email').value,
+                tourTitle: tourTitle,
+                date: tourDate,
+                guests: guestCount,
+                totalPaid: total.toFixed(2),
+                invoiceNo: 'FTK-' + Math.floor(100000 + Math.random() * 900000)
+            };
+            localStorage.setItem('booking_receipt', JSON.stringify(receipt));
+
+            // Redirect to Thank You page after small delay
+            setTimeout(() => {
+                window.location.href = "thank-you.html";
+            }, 1800);
+        });
+
+        // Simple Card Expiry Input Formatter (MM/YY)
+        const expiryInput = document.getElementById('card-expiry');
+        expiryInput.addEventListener('input', (e) => {
+            let val = e.target.value.replace(/\D/g, '');
+            if (val.length > 2) {
+                val = val.substring(0, 2) + '/' + val.substring(2, 4);
+            }
+            e.target.value = val;
+        });
+
+        // Simple Card Number Formatter
+        const cardNumberInput = document.getElementById('card-number');
+        cardNumberInput.addEventListener('input', (e) => {
+            let val = e.target.value.replace(/\D/g, '');
+            let formatted = '';
+            for (let i = 0; i < val.length; i++) {
+                if (i > 0 && i % 4 === 0) formatted += ' ';
+                formatted += val[i];
+            }
+            e.target.value = formatted;
+        });
+    });
+</script>
+</body>
+</html>

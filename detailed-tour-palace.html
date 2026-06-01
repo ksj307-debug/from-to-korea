@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&amp;family=Manrope:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 40%, rgba(252, 249, 248, 1) 95%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#001f3f",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-surface": "#1c1b1b",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#fed65b",
+                        "outline": "#74777f",
+                        "on-surface-variant": "#43474e",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container": "#f0eded",
+                        "inverse-primary": "#afc8f0",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "outline-variant": "#c4c6cf",
+                        "on-primary-fixed-variant": "#2f486a",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#dcd9d9",
+                        "on-secondary-fixed": "#241a00",
+                        "on-primary-container": "#6f88ad",
+                        "error": "#ba1a1a",
+                        "tertiary": "#050606",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-secondary-container": "#745c00",
+                        "on-background": "#1c1b1b",
+                        "primary-fixed-dim": "#afc8f0",
+                        "surface-container-low": "#f6f3f2",
+                        "primary-fixed": "#d4e3ff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-tertiary-container": "#858687",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface-bright": "#fcf9f8",
+                        "secondary-fixed": "#ffe088",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#735c00",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-primary-fixed": "#001c3a",
+                        "inverse-surface": "#313030",
+                        "background": "#fcf9f8",
+                        "tertiary-fixed": "#e2e2e2",
+                        "tertiary-container": "#1d1f1f",
+                        "surface": "#fcf9f8",
+                        "surface-container-high": "#eae7e7",
+                        "on-secondary-fixed-variant": "#574500",
+                        "surface-tint": "#476083",
+                        "primary": "#000613",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "stack-sm": "16px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "stack-md": "40px",
+                        "margin-mobile": "20px",
+                        "stack-xl": "80px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "display-lg-mobile": ["Noto Serif"],
+                        "display-lg": ["Noto Serif"],
+                        "headline-sm": ["Noto Serif"],
+                        "button": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "headline-md": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "button": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="bg-surface dark:bg-surface-container-lowest border-b border-outline-variant dark:border-outline fixed top-0 left-0 right-0 z-50 transition-all duration-200 h-20 w-full">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-full max-w-container-max mx-auto">
+<a href="index.html" class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed">From To Korea</a>
+<a href="book-now.html" class="bg-primary text-on-primary px-6 py-3 font-button text-button rounded hover:opacity-90 transition-all duration-200 inline-flex items-center justify-center">Book This</a>
+</div>
+</header>
+<main class="pt-20">
+<!-- Section 1: Hero & Overview -->
+<section class="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">
+<img alt="Serene Gyeongbokgung Palace at dawn" class="w-full h-full object-cover" data-alt="A wide-angle, high-resolution photograph of the Gyeongbokgung Palace in Seoul during a serene sunrise. The architectural details of the ancient Korean palace are captured with crisp clarity against a soft, desaturated sky. The lighting is ethereal and morning-cool, emphasizing a minimalist and premium aesthetic with deep navy shadows and soft whites. The scene is quiet, devoid of crowds, reflecting exclusivity and tranquility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6oatIIA49djIBPRGT0Xzjs9PzJkWuLj35vd-1bV0kfQCYKW3jRl0DT9R9dIak6jtJsPINUlsNkqaSJoIaCXrkGVEEErxaYDMCJF3MqWkN5WL1DH734rJLuk0dUluy8Hqe6T-kvUtznMRB_KgvSzaV06cljsNxN8SKCqEamgVkN_KGYfkV57P7tShs5nq-2-gzxdrh3d1rK7--8vhclTP7CRC_MIwm-h5nNwK5cxluy6jKNos6QATPkY1rWXSnXSD3DL2wZd_8biAm"/>
+<div class="absolute inset-0 hero-gradient flex items-end">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full pb-stack-xl">
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-on-background mb-stack-sm max-w-3xl">
+                        The Silent Majesty: Private Palace Awakening
+                    </h1>
+<div class="flex flex-wrap gap-4 mt-8">
+<div class="flex items-center gap-2 bg-surface-container-low border border-outline-variant px-4 py-2 rounded">
+<span class="material-symbols-outlined text-primary" style='font-variation-settings: "wght" 300;'>schedule</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Duration: 4-8 Hours</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low border border-outline-variant px-4 py-2 rounded">
+<span class="material-symbols-outlined text-primary" style='font-variation-settings: "wght" 300;'>group</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">100% Private</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low border border-outline-variant px-4 py-2 rounded">
+<span class="material-symbols-outlined text-primary" style='font-variation-settings: "wght" 300;'>translate</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">English Speaking Docent</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: The Narrative -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-xl">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-5">
+<h2 class="font-headline-md text-headline-md text-primary mb-6">The Art of the Journey</h2>
+<div class="w-16 h-0.5 bg-primary mb-8"></div>
+</div>
+<div class="md:col-span-7">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-6">
+                        True luxury is not just what you see, but what you are spared. Our 'Silent Majesty' experience is meticulously choreographed to bypass the standard tourist trails. Your journey begins at a private entrance, where your personal docent—an expert in Joseon dynasty history—awaits. 
+                    </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-8">
+                        While the world gathers at the main gates, you will wander through hidden library pavilions and shaded gardens that remain closed to the general public. We have curated every sensory detail: from the precise timing of light hitting the Secret Garden's lotus ponds to a private degustation of Royal Court delicacies, served in a secluded traditional Hanok setting overlooking the stone walls of the palace grounds. This is Korea, tailormade for the discerning soul.
+                    </p>
+<div class="relative w-full aspect-[16/9] mt-stack-md rounded overflow-hidden">
+<img alt="Traditional Korean Tea Ceremony" class="w-full h-full object-cover" data-alt="A sophisticated close-up of a traditional Korean tea ceremony in a minimalist, sunlit Hanok. The scene features delicate porcelain teaware on a dark wood table, with soft, desaturated tones. The background shows a blurry view of a manicured Zen garden. The lighting is natural and high-end, creating a tranquil and exclusive atmosphere that matches a quiet luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8bsucR7UokdkF7MJZEk5k9DngmchDaaAs4HiUkYwRXLiULx4HPw7F5Uufl5GMb3A1Ge-ZEWr-POiPZSCfXqYFt1w0XWrQiuqTd5jCwT45vwUmGOJep-zGUjos--4SY_UvTTLE9TwYPJkNn_ykrki6j2yRe8_1E6l3KhjS5XAjVf1yjQuYhKDNLVzpk0bOJL66bqGUG2NVVkm9IsScrBM6avAVLQyRt8LeC7-mFNUqB1uDeZp_ShQJpie_rWwkYtbdBhSQzhdveqFX"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Inclusions & Exclusions -->
+<section class="bg-surface-container-low py-stack-xl">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-8 border-b border-outline-variant pb-4">Distinguished Inclusions</h3>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" style='font-variation-settings: "wght" 200;'>check_circle</span>
+<div>
+<p class="font-body-md text-body-md font-bold text-on-surface">Private Docent-Led Guiding</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Expert historical insights and logistics management throughout the tour.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" style='font-variation-settings: "wght" 200;'>check_circle</span>
+<div>
+<p class="font-body-md text-body-md font-bold text-on-surface">Curated Palace Access</p>
+<p class="font-body-md text-body-md text-on-surface-variant">All entrance fees and prioritized entry to restricted palace zones.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" style='font-variation-settings: "wght" 200;'>check_circle</span>
+<div>
+<p class="font-body-md text-body-md font-bold text-on-surface">Hanok Culinary Experience</p>
+<p class="font-body-md text-body-md text-on-surface-variant">A private lunch featuring traditional Royal Court cuisine.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" style='font-variation-settings: "wght" 200;'>check_circle</span>
+<div>
+<p class="font-body-md text-body-md font-bold text-on-surface">Luxury Equipment</p>
+<p class="font-body-md text-body-md text-on-surface-variant">All required gear, high-end umbrellas, and private rest-stop amenities.</p>
+</div>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-8 border-b border-outline-variant pb-4">Personal Considerations</h3>
+<ul class="space-y-6">
+<li class="flex items-start gap-4 opacity-70">
+<span class="material-symbols-outlined text-outline mt-1" style='font-variation-settings: "wght" 200;'>cancel</span>
+<div>
+<p class="font-body-md text-body-md font-bold text-on-surface">Personal Shopping</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Acquisitions made at artisan markets or duty-free boutiques.</p>
+</div>
+</li>
+<li class="flex items-start gap-4 opacity-70">
+<span class="material-symbols-outlined text-outline mt-1" style='font-variation-settings: "wght" 200;'>cancel</span>
+<div>
+<p class="font-body-md text-body-md font-bold text-on-surface">Transport Upgrades</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Premium chauffeur service beyond the standard city transfers.</p>
+</div>
+</li>
+<li class="flex items-start gap-4 opacity-70">
+<span class="material-symbols-outlined text-outline mt-1" style='font-variation-settings: "wght" 200;'>cancel</span>
+<div>
+<p class="font-body-md text-body-md font-bold text-on-surface">Additional Refreshments</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Extra snacks or alcoholic beverages outside the curated menu.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Final Action -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-xl text-center">
+<div class="bg-surface border border-outline-variant p-stack-md md:p-stack-xl rounded shadow-sm">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Reserve Your Private Experience</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">
+                    Limited departures available for this exclusive docent-led journey. Ensure your preferred date is secured today.
+                </p>
+<a class="inline-block bg-primary text-on-primary font-button text-button px-12 py-5 rounded hover:opacity-90 transition-all duration-300 transform hover:scale-[1.02]" href="book-now.html">
+                    Book This Tour Now
+                </a>
+<div class="mt-8 flex justify-center items-center gap-6 text-on-surface-variant opacity-60">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined" style='font-variation-settings: "wght" 200;'>lock</span> Secure Payment</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined" style='font-variation-settings: "wght" 200;'>verified_user</span> 24h Confirmation</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container text-on-primary py-stack-xl border-t border-white/10 w-full">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-md md:gap-gutter">
+<!-- Section 1: Brand Info -->
+<div class="space-y-4">
+<a href="index.html" class="font-headline-sm text-headline-sm text-white block">From To Korea</a>
+<p class="font-body-md text-on-primary-container opacity-80">
+          © 2026 From To Korea. All rights reserved.
+        </p>
+</div>
+<!-- Section 2: Explore -->
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-white">Explore</h4>
+<nav class="flex flex-col gap-3">
+<a class="font-body-md text-on-primary-container hover:text-white transition-colors" href="about.html">About</a>
+<a class="font-body-md text-on-primary-container hover:text-white transition-colors" href="tours.html">Tours</a>
+<a class="font-body-md text-on-primary-container hover:text-white transition-colors" href="blog.html">Blog</a>
+<a class="font-body-md text-on-primary-container hover:text-white transition-colors" href="connect.html">Connect</a>
+</nav>
+</div>
+<!-- Section 3: Legal -->
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-white">Legal</h4>
+<nav class="flex flex-col gap-3">
+<a class="font-body-md text-on-primary-container hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-on-primary-container hover:text-white transition-colors" href="#">Terms &amp; Conditions</a>
+</nav>
+</div>
+<!-- Section 4: Global Platforms -->
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-white">Find Us On</h4>
+<div class="flex gap-4">
+<a aria-label="Instagram" class="text-on-primary-container hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+<a aria-label="Viator" class="text-on-primary-container hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">explore</span>
+</a>
+<a aria-label="Airbnb" class="text-on-primary-container hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+</a>
+<a aria-label="GetYourGuide" class="text-on-primary-container hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">confirmation_number</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll interaction for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('h-16', 'bg-opacity-95', 'backdrop-blur-md');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.add('h-20');
+                header.classList.remove('h-16', 'bg-opacity-95', 'backdrop-blur-md');
+            }
+        });
+
+        // Set state for booking redirect
+        document.querySelectorAll('a[href="book-now.html"]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const booking = {
+                    tourTitle: "Seoul's Heritage & Street Food",
+                    guests: 2,
+                    date: ''
+                };
+                localStorage.setItem('current_booking', JSON.stringify(booking));
+            });
+        });
+    </script>
+</body></html>

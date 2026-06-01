@@ -1,0 +1,301 @@
+<!DOCTYPE html><html lang="en" style=""><head><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Tours - Your Personal Seoul</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dcd9d9",
+                        "outline-variant": "#c4c6cf",
+                        "surface-bright": "#fcf9f8",
+                        "tertiary-fixed": "#e2e2e2",
+                        "primary": "#000613",
+                        "inverse-on-surface": "#f3f0ef",
+                        "outline": "#74777f",
+                        "on-tertiary-container": "#858687",
+                        "tertiary-container": "#1d1f1f",
+                        "on-secondary-fixed-variant": "#574500",
+                        "inverse-surface": "#313030",
+                        "primary-container": "#001f3f",
+                        "primary-fixed": "#d4e3ff",
+                        "on-secondary-container": "#745c00",
+                        "secondary-container": "#fed65b",
+                        "primary-fixed-dim": "#afc8f0",
+                        "surface-variant": "#e5e2e1",
+                        "on-primary-fixed-variant": "#2f486a",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-primary-fixed": "#001c3a",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#afc8f0",
+                        "secondary": "#735c00",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-surface": "#1c1b1b",
+                        "on-primary-container": "#6f88ad",
+                        "tertiary": "#050606",
+                        "surface": "#fcf9f8",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-container-high": "#eae7e7",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1c1b1b",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-surface-variant": "#43474e",
+                        "background": "#fcf9f8",
+                        "secondary-fixed": "#ffe088",
+                        "surface-container-low": "#f6f3f2",
+                        "error": "#ba1a1a",
+                        "surface-container": "#f0eded",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#476083"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "stack-xl": "80px",
+                        "margin-mobile": "20px",
+                        "stack-md": "40px",
+                        "container-max": "1200px",
+                        "stack-sm": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "display-lg-mobile": ["Noto Serif"],
+                        "body-md": ["Manrope"],
+                        "headline-sm": ["Noto Serif"],
+                        "headline-md": ["Noto Serif"],
+                        "display-lg": ["Noto Serif"],
+                        "button": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "button": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary">
+<!-- TopNavBar JSON Shared Component -->
+<header class="bg-surface/90 dark:bg-primary/90 backdrop-blur-md w-full top-0 sticky z-50 border-b border-outline-variant/30">
+<div class="flex justify-between items-center px-margin-desktop py-6 max-w-container-max mx-auto">
+<!-- Brand Logo -->
+<a class="font-display-lg text-headline-sm tracking-tighter text-primary dark:text-surface-bright" href="index.html">From To Korea</a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex gap-gutter items-center"><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed transition-colors hover:opacity-90 transition-opacity" href="about.html">About</a><a class="font-body-md text-body-md text-primary dark:text-primary-fixed-dim font-semibold border-b border-primary dark:border-primary-fixed-dim pb-1 active:scale-95 transition-transform duration-200" href="tours.html">Tours</a><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed transition-colors hover:opacity-90 transition-opacity" href="blog.html">Blog</a><a class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed transition-colors hover:opacity-90 transition-opacity" href="connect.html">Connect</a></nav>
+<!-- Trailing Action -->
+<!-- Mobile Menu Toggle (Decorative for this scope) -->
+<button class="md:hidden text-primary" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined" data-weight="fill">menu</span>
+</button>
+</div>
+</header><div id="mobile-menu-drawer" class="fixed inset-0 z-[60] transform translate-x-full transition-transform duration-300 ease-in-out md:hidden"><div class="absolute inset-0 bg-primary/40 backdrop-blur-sm" onclick="toggleMobileMenu()"></div><div class="absolute right-0 top-0 h-full w-64 bg-surface shadow-xl p-6 flex flex-col gap-8"><div class="flex justify-end"><button onclick="toggleMobileMenu()" class="text-primary p-2"><span class="material-symbols-outlined">close</span></button></div><nav class="flex flex-col gap-6"><a class="font-body-lg text-lg text-primary" href="index.html" onclick="toggleMobileMenu()">Home</a><a class="font-body-lg text-lg text-primary" href="about.html" onclick="toggleMobileMenu()">About</a><a class="font-body-lg text-lg text-primary font-bold" href="tours.html" onclick="toggleMobileMenu()">Tours</a><a class="font-body-lg text-lg text-primary" href="blog.html" onclick="toggleMobileMenu()">Blog</a><a class="font-body-lg text-lg text-primary" href="connect.html" onclick="toggleMobileMenu()">Connect</a></nav></div></div><script>function toggleMobileMenu() { const drawer = document.getElementById('mobile-menu-drawer'); if (drawer.classList.contains('translate-x-full')) { drawer.classList.remove('translate-x-full'); drawer.classList.add('translate-x-0'); } else { drawer.classList.remove('translate-x-0'); drawer.classList.add('translate-x-full'); } }</script>
+<main class="w-full">
+<!-- Page Header -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-stack-xl text-center">
+<h1 class="font-display-lg text-display-lg text-primary mb-stack-sm">Signature Programs</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Discover a curated selection of bespoke experiences. We design each journey to mirror the effortless discovery of a private, exclusive gallery.
+            </p>
+</section>
+<!-- Tours Grid Layout -->
+<section class="max-w-container-max mx-auto px-margin-desktop pb-stack-xl">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Program 1: Han River -->
+<article class="flex flex-col bg-surface border border-outline-variant/50 rounded-lg overflow-hidden group hover:shadow-[0px_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300">
+<div class="relative h-[300px] w-full bg-surface-container overflow-hidden">
+<img alt="Han River Picnic" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A beautifully curated luxury picnic setup on the grassy banks of the Han River in Seoul at golden hour. Soft, ambient sunlight catches elegant folding chairs, a chic minimalist tent, and neatly arranged contemporary Korean street food. The mood is highly sophisticated, relaxing, and exclusive. The color palette emphasizes deep navy shadows contrasting with warm, soft sunset hues and clean white accents, reflecting a modern, premium lifestyle aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRutF5Oel55sIDApQJATb19DRYQ9Oa4KBZ1H750BoXd_dC6yIgRHgKclGsyy1A3vmCYpkJVd_4T9Ap1MK2IQRI2yhySCfi5nmyjDzhI9wE_ecRzGmABU5BtwtyunR5eV-ml1lpX_NxxRuGa6CVmblnHQj2dswnTlInDtdnSaFmeSU7U26JHWdJCy09qQXw_VK79393qHEw8nU48EFn6a85F91vW-RQJb7RcEMpzEWzzDrEMR2YJXGBUf0FU02Zrf-ha7Qaf9ziScgS">
+</div>
+<div class="flex flex-col flex-grow p-gutter gap-stack-sm">
+<div class="flex flex-wrap gap-2 mb-2">
+<span class="px-2 py-1 bg-surface-container-high text-on-surface font-label-caps text-label-caps rounded-full border border-outline-variant/30">4 Hours</span>
+<span class="px-2 py-1 bg-surface-container-high text-on-surface font-label-caps text-label-caps rounded-full border border-outline-variant/30">Families &amp; Friends</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Han River Chill like a Local</h2>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                            A relaxing tour including premium rental gear (tents, chairs) and curated K-food delivery (Chimaek, Ramyeon) designed to let you unwind effortlessly like a true local.
+                        </p>
+<div class="flex items-center justify-between mt-stack-md pt-stack-sm border-t border-outline-variant/30">
+<div>
+<span class="font-label-caps text-label-caps text-outline block mb-1">Starts from</span>
+<span class="font-body-lg text-body-lg text-primary font-semibold">$150</span>
+</div>
+<a class="bg-primary-container text-on-primary px-5 py-2 rounded font-button text-button hover:opacity-90 transition-opacity" href="detailed-tour-palace.html">Find details</a>
+</div>
+</div>
+</article>
+<!-- Program 2: Heritage & Street Food -->
+<article class="flex flex-col bg-surface border border-outline-variant/50 rounded-lg overflow-hidden group hover:shadow-[0px_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300">
+<div class="relative h-[300px] w-full bg-surface-container overflow-hidden">
+<img alt="Gyeongbokgung Palace" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A highly architectural, minimalist photograph of Gyeongbokgung Palace in Seoul. The image focuses on the elegant rooflines and ornate woodwork set against a vast, clean white negative space of an overcast sky. The composition is editorial and gallery-like. The color grading is slightly desaturated with deep, rich blacks and pristine whites, conveying a sense of quiet luxury, history, and profound trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDje2pLDuRq0N0AA0cbws39e3C1Tqqjby_R3rMLsxuARhuJ4V6NAr0DjfTNRl9WcP0KSaunM-lBmquROkMqJdg-rLy0NzUTyo8dXsBx2-IzjV4QR1HGS8qfncDFuZreQVzDCDYRCffzpBid2b9KcsbtseCpN-QNUFEo_WKgsaLmf66TpfyICcHk8V94mPpttYzQOqFSeukIXXXtHKfIBQBc0kVJMZeR1GwG0KPVk_1cpsq86Rqn-dL5HN_HuLSYgNtm7e6_0h8FZEi4">
+</div>
+<div class="flex flex-col flex-grow p-gutter gap-stack-sm">
+<div class="flex flex-wrap gap-2 mb-2">
+<span class="px-2 py-1 bg-surface-container-high text-on-surface font-label-caps text-label-caps rounded-full border border-outline-variant/30">5 Hours</span>
+<span class="px-2 py-1 bg-surface-container-high text-on-surface font-label-caps text-label-caps rounded-full border border-outline-variant/30">Couples &amp; Solo</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Seoul's Heritage &amp; Street Food</h2>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                            A private docent-led exploration of Gyeongbokgung Palace paired seamlessly with a curated, high-end tasting journey through the vibrant alleys of Gwangjang Market.
+                        </p>
+<div class="flex items-center justify-between mt-stack-md pt-stack-sm border-t border-outline-variant/30">
+<div>
+<span class="font-label-caps text-label-caps text-outline block mb-1">Starts from</span>
+<span class="font-body-lg text-body-lg text-primary font-semibold">$200</span>
+</div>
+<a class="bg-primary-container text-on-primary px-5 py-2 rounded font-button text-button hover:opacity-90 transition-opacity" href="detailed-tour-palace.html">Find details</a>
+</div>
+</div>
+</article>
+<!-- Program 3: Personal Designer -->
+<article class="flex flex-col bg-surface border border-outline-variant/50 rounded-lg overflow-hidden group hover:shadow-[0px_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300">
+<div class="relative h-[300px] w-full bg-surface-container overflow-hidden">
+<img alt="Bespoke Design Session" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up, sophisticated lifestyle shot of a bespoke travel planning session. An elegant journal, a sleek metallic pen, and a minimalist cup of coffee sit on a polished dark wood table. The lighting is dramatic yet soft, casting long, elegant shadows that highlight the textures of the high-quality paper. The aesthetic is extremely modern, minimalist, and tailored toward a high-net-worth individual expecting exclusive, 1:1 service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6kyYYG3MQ0S0rYQfQ1kjUWkMc3hIEXNlXAotbj1UWQB306HnbZ9T8y4mcm--uz-LvRUVQEL_Slx58mHDpI0Kgisr5FYT_M3Qb7z-p8hR5HO__BJRIF1gyCBt2luacyr-RuInKCdncPjhHjkrClbQrEPwkmGV7Jk20LXecLVT52DP4Ch_hxGheP0JWj12NFtCLRQNWea2MbeCQrmZv_ldW4vbxdd0Jv2WorCJa-klgyQFSCDrKp20mjl03aiPiCSV_zfqqFviu2Ukm">
+</div>
+<div class="flex flex-col flex-grow p-gutter gap-stack-sm">
+<div class="flex flex-wrap gap-2 mb-2">
+<span class="px-2 py-1 bg-surface-container-high text-on-surface font-label-caps text-label-caps rounded-full border border-outline-variant/30">Full Day / Multi-Day</span>
+<span class="px-2 py-1 bg-surface-container-high text-on-surface font-label-caps text-label-caps rounded-full border border-outline-variant/30">Bespoke</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Your Personal Seoul Designer</h2>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                            A 1:1 bespoke travel design service. Based on a precision survey and consultation, we construct a fully custom, exclusive itinerary designed just for you.
+                        </p>
+<div class="flex items-center justify-between mt-stack-md pt-stack-sm border-t border-outline-variant/30">
+<div>
+<span class="font-label-caps text-label-caps text-outline block mb-1">Starts from</span>
+<span class="font-body-lg text-body-lg text-primary font-semibold">Variable</span>
+</div>
+<a class="bg-primary-container text-on-primary px-5 py-2 rounded font-button text-button hover:opacity-90 transition-opacity" href="get-quote.html">Get Quote</a>
+</div>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer JSON Shared Component -->
+<footer class="w-full bg-primary-container text-on-primary-container border-t border-outline/20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<!-- 1. Brand Info -->
+<div class="flex flex-col gap-4">
+<a class="font-display-lg text-headline-sm tracking-tighter text-surface-bright" href="index.html">From To Korea</a>
+<p class="font-body-md text-sm text-on-primary-container/80">
+                    © 2026 From To Korea. All rights reserved.
+                </p>
+</div>
+<!-- 2. Navigation Links -->
+<div class="flex flex-col gap-6">
+<h3 class="font-label-caps text-label-caps text-surface-bright uppercase">Explore</h3>
+<nav class="flex flex-col gap-3">
+<a class="font-body-md text-sm hover:text-surface-bright transition-colors" href="about.html">About</a>
+<a class="font-body-md text-sm hover:text-surface-bright transition-colors" href="tours.html">Tours</a>
+<a class="font-body-md text-sm hover:text-surface-bright transition-colors" href="blog.html">Blog</a>
+<a class="font-body-md text-sm hover:text-surface-bright transition-colors" href="connect.html">Connect</a>
+</nav>
+</div>
+<!-- 3. Legal Links -->
+<div class="flex flex-col gap-6">
+<h3 class="font-label-caps text-label-caps text-surface-bright uppercase">Legal</h3>
+<nav class="flex flex-col gap-3">
+<a class="font-body-md text-sm hover:text-surface-bright transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-sm hover:text-surface-bright transition-colors" href="#">Terms &amp; Conditions</a>
+</nav>
+</div>
+<!-- 4. Global Platforms -->
+<div class="flex flex-col gap-6">
+<h3 class="font-label-caps text-label-caps text-surface-bright uppercase">Find Us On</h3>
+<div class="flex gap-6">
+<a aria-label="Instagram" class="hover:text-surface-bright transition-colors" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+<a aria-label="Viator" class="hover:text-surface-bright transition-colors" href="#">
+<span class="material-symbols-outlined">explore</span>
+</a>
+<a aria-label="Airbnb" class="hover:text-surface-bright transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+</a>
+<a aria-label="GetYourGuide" class="hover:text-surface-bright transition-colors" href="#">
+<span class="material-symbols-outlined">confirmation_number</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Add event listeners to select the tour program on click
+    const cards = document.querySelectorAll('article');
+    cards.forEach(card => {
+        const link = card.querySelector('a');
+        const h2 = card.querySelector('h2');
+        if (link && h2) {
+            const title = h2.innerText.trim();
+            link.addEventListener('click', (e) => {
+                const targetHref = link.getAttribute('href');
+                if (targetHref === 'book-now.html' || targetHref === 'detailed-tour-palace.html') {
+                    const booking = {
+                        tourTitle: title,
+                        guests: 2,
+                        date: ''
+                    };
+                    localStorage.setItem('current_booking', JSON.stringify(booking));
+                } else if (targetHref === 'get-quote.html') {
+                    localStorage.setItem('selected_quote_program', title);
+                }
+            });
+        }
+    });
+});
+</script>
+</body></html>
